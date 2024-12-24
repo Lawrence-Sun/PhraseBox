@@ -7,7 +7,7 @@ def read_file(file_path):
         for line in file:
             yield line.strip()
 
-def convert_to_csv_EN(fileName, outputName):
+def convert_to_csv(fileName, outputName):
     # 初始化变量
     data_list = []
     id_value = ''
@@ -22,7 +22,8 @@ def convert_to_csv_EN(fileName, outputName):
     name = fileName
 
     # 创建一个迭代器
-    lines = read_file(f'{name}.txt')
+    # lines = read_file(f'{name}.txt')
+    lines = read_file(fileName)
     line = next(lines, None)
 
     # 解析文本文件内容
