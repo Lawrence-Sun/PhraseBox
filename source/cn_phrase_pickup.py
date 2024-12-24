@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 # 读取文本文件的生成器
 def read_file(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
@@ -22,12 +23,6 @@ def convert_to_csv(fileName, outputName):
     dialogue = []
     patient_flag = False
     doctor_flag = False
-
-    dialogue_flag = False
-    unLinked_patient = ''
-    unLinked_doctor = ''
-    writing_dialogue_flag = False
-
     # 创建一个迭代器
     lines = read_file(fileName)
     line = next(lines, None)
